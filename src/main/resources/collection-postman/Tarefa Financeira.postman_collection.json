@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "980eb6fe-eb5d-40a0-bba7-ca26e14e0561",
+		"name": "Tarefa Financeira",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PESSOA",
+			"item": [
+				{
+					"name": "CREATE PESSOA",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2FxdWltQHVzZXIuY29tIiwiYXV0aCI6eyJuYW1lIjoiVVNFUiJ9LCJpYXQiOjE2ODQ1MjE0MDksImV4cCI6MTY4NDY5NDIwOX0.nQusLAHkoHUoPhvvOHrdaJ0Q0jQccEr6Vxp6v2OFUYE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Pedro\",\r\n    \"identificador\":\"1234567890\",\r\n    \"dataNascimento\":\"15/11/1983\",\r\n    \"vlMinimo\":\"300\",\r\n    \"vlMaximo\":\"11000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/pessoa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pessoa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ PESSOA",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2FxdWltQHVzZXIuY29tIiwiYXV0aCI6eyJuYW1lIjoiVVNFUiJ9LCJpYXQiOjE2ODQ1MjE0MDksImV4cCI6MTY4NDY5NDIwOX0.nQusLAHkoHUoPhvvOHrdaJ0Q0jQccEr6Vxp6v2OFUYE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Joaquim\",\r\n    \"identificador\":\"11223344789\",\r\n    \"dataNascimento\":\"15/11/1983\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/pessoa/1234567890",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pessoa",
+								"1234567890"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EMPRESTIMO",
+			"item": [
+				{
+					"name": "PAGAMENTO",
+					"item": [
+						{
+							"name": "PAGAR",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"valorPago\":\"1500.00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/pagamento/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pagamento",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2FxdWltQHVzZXIuY29tIiwiYXV0aCI6eyJuYW1lIjoiVVNFUiJ9LCJpYXQiOjE2ODQ1MjE0MDksImV4cCI6MTY4NDY5NDIwOX0.nQusLAHkoHUoPhvvOHrdaJ0Q0jQccEr6Vxp6v2OFUYE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"valorDesejado\":\"1500.00\",\r\n    \"parcelas\":3\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/emprestimo/1234567890",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"emprestimo",
+								"1234567890"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
