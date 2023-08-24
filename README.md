@@ -1,0 +1,2 @@
+# Desafio-Financeira
+>A Empresa X é uma instituição financeira inovadora e próspera, especializada na concessão de empréstimos. Fundada há alguns anos por um grupo de empreendedores experientes, a empresa rapidamente ganhou reconhecimento no mercado por sua abordagem amigável e atendimento personalizado aos clientes. Seu objetivo é ajudar os clientes a alcançarem seus objetivos financeiros de forma segura e responsável. A empresa está em constante crescimento, portanto é bem importante pensar no crescimento da regra de negócio. 
